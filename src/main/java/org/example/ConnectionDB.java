@@ -7,18 +7,18 @@ import java.sql.SQLException;
 public class ConnectionDB {
 
     public Connection getConnection() {
-        // URL de conexión a la base de datos SQL Server.
+        // URL de conexión a la base de datos postgres.
         String url = "jdbc:postgresql://localhost:5432/postgres";
 
 // Credenciales de acceso a la base de datos.
         String usuario = "postgres";
         String contraseña = "12345";
 
-        // Cargar el driver de SQL Server.
+        // Cargar el driver de postgres.
         try {
             Connection conexion = DriverManager.getConnection(url, usuario, contraseña);
             if (conexion != null) {
-                System.out.println("✅ Conexión exitosa a la base de datos SQL Server.");
+                System.out.println("✅ Conexión exitosa a la base de datos postgres.");
                 return conexion;
             } else {
                 System.out.println("⚠️ La conexión es nula. Revisa los parámetros.");
@@ -44,8 +44,6 @@ public class ConnectionDB {
             }
         }
     }
-
-
 }
 
 
