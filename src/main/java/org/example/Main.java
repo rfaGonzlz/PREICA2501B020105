@@ -6,7 +6,8 @@ public class Main {
     public static void main(String[] args) {
 
         // Crear un objeto Profesor y agregarlo a la lista
-        Profesor profesor = new Profesor("Juan", "Pérez", "01/03/1999", "Masculino", 1.75, 70.0, "Matemáticas");
+        Profesor profesor = new Profesor();
+
 
         // Establecer la conexión a la base de datos.
         ConnectionDB connectionDB = new ConnectionDB();
@@ -20,7 +21,8 @@ public class Main {
         connectionDB.closeConnection(connection);
 
         // Agregar el profesor al array y mostrar los registros.
-        profesor.agregar(profesor);
+        profesor.agregar();
+        profesor.llenarAutomaticamente();
         profesor.imprimirRegistros();
     }
 }

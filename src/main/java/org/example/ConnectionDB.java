@@ -8,11 +8,11 @@ public class ConnectionDB {
 
     public Connection getConnection() {
         // URL de conexión a la base de datos SQL Server.
-        String url = "jdbc:sqlserver://localhost:1433;databaseName=Profesores;encrypt=true;trustServerCertificate=true";
+        String url = "jdbc:postgresql://localhost:5432/postgres";
 
 // Credenciales de acceso a la base de datos.
-        String usuario = "rfagnzlz";
-        String contraseña = "123456789";
+        String usuario = "postgres";
+        String contraseña = "12345";
 
         // Cargar el driver de SQL Server.
         try {
