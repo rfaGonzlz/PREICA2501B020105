@@ -11,7 +11,6 @@ public class Profesor extends Persona {
     private int contador = 0;
     private String asignatura;
     private Profesor[] profesores = new Profesor[50];
-    Scanner sc = new Scanner(System.in);
 
     // Constructor por defecto que inicializa un objeto Profesor sin parámetros.
     public Profesor() {
